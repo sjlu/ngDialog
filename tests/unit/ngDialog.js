@@ -415,21 +415,21 @@ describe('ngDialog', function () {
       expect(elm.hasClass('ngdialog-second')).toEqual(true);
     });
 
-    it('should properly remove one body class', inject(function ($document) {
+    it('should properly remove one body class', function () {
       first.close();
       flush();
 
       expect(elm.hasClass('ngdialog-second')).toEqual(true);
       expect(elm.hasClass('ngdialog-first')).toEqual(false);
-    }));
+    });
 
-    it('should properly remove all classes on closeAll', inject(function ($document) {
+    it('should properly remove all classes on closeAll', function () {
       ngDialog.closeAll();
       flush();
 
       expect(elm.hasClass('ngdialog-second')).toEqual(false);
       expect(elm.hasClass('ngdialog-first')).toEqual(false);
-    }));
+    });
   });
 
 });
